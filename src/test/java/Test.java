@@ -1,8 +1,10 @@
-import Requirement2.NutritionFacts;
+import requirement14.PhoneNumber;
+import requirement2.NutritionFacts;
 import org.junit.Assert;
 
 import java.util.HashMap;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Test {
     @org.junit.Test
@@ -20,5 +22,12 @@ public class Test {
         Set<String> strings2 = hashMap.keySet();
         Assert.assertEquals(strings1,strings2);
         System.out.println(strings1==strings2);
+    }
+    @org.junit.Test
+    public void  testCompare(){
+        TreeSet<PhoneNumber> treeSet = new TreeSet<>();
+        treeSet.add(new PhoneNumber(3,2,3));
+        treeSet.add(new PhoneNumber(2,3,1));
+        System.out.println(treeSet);
     }
 }

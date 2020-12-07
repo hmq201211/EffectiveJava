@@ -1,4 +1,4 @@
-package Requirement2;
+package requirement2;
 
 public class NutritionFacts {
     private final int servingSize;
