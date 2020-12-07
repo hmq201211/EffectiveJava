@@ -1,10 +1,9 @@
 import requirement14.PhoneNumber;
+import requirement18.InstrumentedSet;
 import requirement2.NutritionFacts;
 import org.junit.Assert;
 
-import java.util.HashMap;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Test {
     @org.junit.Test
@@ -29,5 +28,15 @@ public class Test {
         treeSet.add(new PhoneNumber(3,2,3));
         treeSet.add(new PhoneNumber(2,3,1));
         System.out.println(treeSet);
+    }
+    @org.junit.Test
+    public void testMySet(){
+        InstrumentedSet<String> instrumentedSet = new InstrumentedSet<>(new HashSet<>());
+        instrumentedSet.add("1");
+        System.out.println(instrumentedSet.getAddCount());
+        instrumentedSet.add("2");
+        System.out.println(instrumentedSet.getAddCount());
+        instrumentedSet.addAll(Arrays.asList("1","2"));
+        System.out.println(instrumentedSet.getAddCount());
     }
 }
