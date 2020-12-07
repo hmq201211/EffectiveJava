@@ -1,5 +1,6 @@
 import requirement14.PhoneNumber;
 import requirement18.InstrumentedSet;
+import requirement19.Sub;
 import requirement2.NutritionFacts;
 import org.junit.Assert;
 
@@ -38,5 +39,10 @@ public class Test {
         System.out.println(instrumentedSet.getAddCount());
         instrumentedSet.addAll(Arrays.asList("1","2"));
         System.out.println(instrumentedSet.getAddCount());
+    }
+    @org.junit.Test
+    public void testExtends(){
+        Sub sub = new Sub();
+        sub.overrideMe();
     }
 }
