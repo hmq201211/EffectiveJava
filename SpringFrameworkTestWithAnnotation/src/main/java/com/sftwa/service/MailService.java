@@ -1,5 +1,6 @@
 package com.sftwa.service;
 
+import com.sftwa.annotation.MyAspect;
 import com.sftwa.filter.MyFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,5 +25,9 @@ public class MailService {
         for (MyFilter myFilter : myFilters) {
             myFilter.print();
         }
+    }
+    @MyAspect("intercept")
+    public void wantBeIntercepted(){
+        System.out.println("be intercepted");
     }
 }

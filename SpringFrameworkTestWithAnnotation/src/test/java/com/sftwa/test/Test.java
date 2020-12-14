@@ -1,6 +1,7 @@
 package com.sftwa.test;
 
 import com.sftwa.bean.NotExistBean;
+import com.sftwa.service.MailService;
 import com.sftwa.service.ReadService;
 import com.sftwa.service.UserService;
 import org.junit.Assert;
@@ -15,6 +16,8 @@ public class Test {
         UserService userService2 = context.getBean("userService", UserService.class);
         ReadService readService = context.getBean("readService", ReadService.class);
         NotExistBean notExistBean = context.getBean("notExistBean", NotExistBean.class);
+        MailService mailService = context.getBean("mailService", MailService.class);
+        mailService.wantBeIntercepted();
         userService.printUser();
         System.out.println(userService==userService2);
         String s = context.getBean("myFactoryBean",String.class);
